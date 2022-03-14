@@ -4,14 +4,40 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+    state: {
+        liked: [],
+        activeModal: null,
+    },
+    getters: {
+        loved: state => petName => {
+            return state.liked.includes(petName)
+        }
+    },
+    mutations: {
+        like({ liked }, petName) {
+            liked.push(petName)
+        },
+        dislike({ liked }, petName) {
+            const index = liked.findIndex(pet => pet === petName)
+            liked.splice(index, 1)
+        },
+        adopt(state) {
+            state.activeModal = 'adoptModal'
+        },
+        closeModal(state) {
+            state.activeModal = null
+        },
+    },
+    actions: {
+        toggleLike({ commit, getters, state }, petName) {
+            if(getters.loved(petName)) {
+                commit('dislike', petName)
+            } else {
+                commit('like', petName)
+                state.activeModal = 'favModal'
+            }
+        },
+    },
+    modules: {
+    }
 })

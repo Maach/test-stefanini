@@ -1,0 +1,39 @@
+footer {
+    background: rgba(#D9A918, .5);
+
+    .wrapper {
+        display: flex; gap: 20px; align-items: center; justify-content: space-between; width: 100%;
+        a {
+            text-decoration: none;
+        }
+        p, a {
+            strong {
+                font-weight: 700; 
+            }
+        }
+    }
+
+    .info {
+        padding: 60px 0;
+        .contato {
+            max-width: 430px;
+            p, a {
+                font-weight: 300; font-size: 18px; line-height: 25px; color: #000000;
+                &:not(:last-child) {
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .copy {
+        background: #6C3659; padding: 14px 0;
+        p, a {
+            font-size: 20px; line-height: 27px; color: #FFFFFF;
+        }
+    }
+
+    .svg-icon {
+        width: 332px; height: auto;
+    }
+}

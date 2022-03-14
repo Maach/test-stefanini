@@ -1,0 +1,40 @@
+.pet {
+    max-width: 300px;
+    h2 {
+        line-height: 2; font-size: 2em
+    }
+    .actions {
+        display: flex; justify-content: space-between; gap: 20px;
+        .fav {
+            background-image: url(~@/assets/images/GrayHeart.png); background-size: 32px; 
+            background-repeat: no-repeat; background-position: center; width: 60px; height: 52px; 
+            font: 0/0 a; transition: background-image .3s ease
+        }
+    }
+
+    &.loved {
+        .actions {
+            .fav {
+                background-image: url(~@/assets/images/Heart.png);
+            }
+        }
+    }
+}
+
+@media (-webkit-device-pixel-ratio: 2) {
+    .pet {
+        .actions {
+            .fav {
+                background-image: url(~@/assets/images/GrayHeart2x.png);
+            }
+        }
+
+        &.loved {
+            .actions {
+                .fav {
+                    background-image: url(~@/assets/images/Heart2x.png);
+                }
+            }
+        }
+    }
+}

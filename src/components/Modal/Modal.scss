@@ -1,0 +1,36 @@
+.modal {
+    position: fixed; top: 0; left: 0; bottom: 0; right: 0; background: rgba(#464646, .65); z-index: 200;
+    padding: 25px; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(5px);
+
+    .content {
+        max-width: 590px; min-height: 410px; border-radius: 20px; width: 100%; display: flex; align-items: center;
+        padding: 30px 65px; position: relative;
+
+        .close {
+            background-image: url(~@/assets/images/Close.png); background-size: contain; 
+            background-repeat: no-repeat; background-position: center; width: 32px; height: 32px; 
+            font: 0/0 a; position: absolute; top: 33px; right: 33px;
+            @media (-webkit-device-pixel-ratio: 2) {
+                background-image: url(~@/assets/images/Close2x.png);
+            }
+        }
+
+        .text {
+            h2 {
+                font-weight: 700; font-size: 48px; line-height: 61px; max-width: 176px;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 26px; line-height: 35px; max-width: 276px;
+            }
+        }
+    }
+}
+
+.component-aside-enter-active, .component-aside-leave-active {
+    transition: all .5s ease;
+}
+
+.component-aside-enter, .component-aside-leave-to {
+    opacity: 0; visibility: hidden
+}
