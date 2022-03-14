@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Adocao from '@/views/Adocao/Adocao.vue'
+import Regras from '@/views/Regras/Regras.vue'
 
 Vue.use(VueRouter)
 
@@ -11,9 +12,9 @@ const routes = [
         component: Adocao
     },
     {
-        path: '/regras',
+        path: '/nossas-regras',
         name: 'regras',
-        component: import(/* webpackChunkName: "regras" */ '@/views/Regras/Regras.vue')
+        component: Regras
     },
 ]
 
