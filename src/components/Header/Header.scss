@@ -12,4 +12,18 @@ header {
     .svg-icon {
         width: 222px; height: auto;
     }
+
+    @media (max-width: 768px) {
+        padding: 20px 0;
+        .wrapper {
+            gap: 40px; justify-content: space-between;
+            a {
+                font-size: 28px;
+            }
+        }
+
+        .svg-icon {
+            width: 170px;
+        }
+    }
 }

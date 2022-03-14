@@ -2,7 +2,7 @@
     padding: 50px 0;
 
     img {
-        display: block; margin-left: auto; margin-right: 0; max-width: 754px; width: 100%; pointer-events: none;
+        display: block; margin-left: 25px; margin-right: 0; margin-bottom: 25px; max-width: 754px; width: 100%; pointer-events: none;
         float: right;
     }
 
@@ -20,5 +20,23 @@
 
     ul {
         list-style: disc; padding: 0 30px;
+    }
+
+    @media (max-width: 1280px) {
+        img {
+            max-width: 600px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        img {
+            max-width: 400px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        img {
+            float: none;
+        }
     }
 }

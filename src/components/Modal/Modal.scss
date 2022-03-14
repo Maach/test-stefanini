@@ -25,6 +25,20 @@
             }
         }
     }
+
+    @media (max-width: 600px) {
+        .content {
+            img {
+                display: none;
+            }
+
+            .text {
+                h2, p {
+                    max-width: 100%; text-align: center;
+                }
+            }
+        }
+    }
 }
 
 .component-aside-enter-active, .component-aside-leave-active {
