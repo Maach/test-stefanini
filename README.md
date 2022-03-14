@@ -1,5 +1,10 @@
 # test-stefanini
 
+## Node Version
+```
+16.13.0
+```
+
 ## Project setup
 ```
 npm install
