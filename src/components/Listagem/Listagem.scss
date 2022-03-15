@@ -4,4 +4,11 @@
     .wrapper {
         display: flex; justify-content: center; gap: 62px 68px; flex-wrap: wrap;
     }
+
+    @media (max-width: 900px) {
+        padding: 0;
+        .wrapper {
+            gap: 50px 25px;
+        }
+    }
 }

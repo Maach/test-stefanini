@@ -1,11 +1,33 @@
 header {
-    background: rgba(#D9A918, .5); padding: 45px 0;
+    background: #e5cd84; padding: 45px 0;
 
     .wrapper {
         display: flex; gap: 80px; align-items: center; width: 100%;
+
+        nav {
+            width: 100%; display: flex;
+
+            .button {
+                width: 52px; height: 48px; align-items: center; justify-content: center;
+                background: #D1A4FF; display: none; box-shadow: none;
+    
+                .svg-icon {
+                    width: 30px;
+                }
+            }
+        }
+
+        .logo {
+            flex-shrink: 0;
+        }
+
         a {
             font-family: 'Amatic SC'; font-weight: 700; font-size: 36px; line-height: 45px; color: #1F0F2B;
             text-decoration: none;
+
+            &:hover {
+                color: $primary1;
+            }
         }
     }
 
@@ -13,17 +35,39 @@ header {
         width: 222px; height: auto;
     }
 
-    @media (max-width: 768px) {
-        padding: 20px 0;
+    @media (max-width: 768px) and (orientation: portrait) {
+        padding: 10px 0;
+
         .wrapper {
-            gap: 40px; justify-content: space-between;
+            justify-content: space-between;
+
+            nav {
+                justify-content: flex-end;
+
+                .button {
+                    display: flex; order: 2;
+                }
+                
+                ul {
+                    display: none;
+                }
+
+                &.active {
+                    position: relative;
+                    ul {
+                        display: block; background: #e5cd84; position: absolute; top: calc(100% + 10px ); right: -15px;
+                        padding: 10px 30px 10px 15px; border-bottom-left-radius: 10px; z-index: 10;
+                    }
+                }
+            }
+
             a {
                 font-size: 28px;
             }
         }
 
         .svg-icon {
-            width: 170px;
+            width: 92px;
         }
     }
 }

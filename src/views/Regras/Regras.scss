@@ -9,4 +9,34 @@
     .about {
         position: relative; max-width: 810px; padding: 0;
     }
+
+    @media (max-width: 1440px) {
+        &:before {
+            max-width: 605px; height: 600px;
+        }
+    }
+
+    @media (max-width: 1366px) {
+        &:before {
+            max-width: 555px; height: 550px;
+        }
+
+        .about {
+            max-width: 600px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &:before {
+            position: static; margin: 0 auto; max-width: 330px; height: 310px; display: block;
+            @include responsiveBg('~@/assets/images/mobile/RulesDog.png', '~@/assets/images/mobile/RulesDog2x.png', contain, false, true)
+        }
+
+        .about {
+            margin: 0 auto; max-width: 700px;
+            p {
+                text-align: left;
+            }
+        }
+    }
 }

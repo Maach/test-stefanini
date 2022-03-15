@@ -7,12 +7,8 @@
         padding: 30px 65px; position: relative; border: 10px solid #fff;
 
         .close {
-            background-image: url(~@/assets/images/Close.png); background-size: contain; 
-            background-repeat: no-repeat; background-position: center; width: 32px; height: 32px; 
-            font: 0/0 a; position: absolute; top: 33px; right: 33px;
-            @media (-webkit-device-pixel-ratio: 2) {
-                background-image: url(~@/assets/images/Close2x.png);
-            }
+            @include responsiveBg('~@/assets/images/Close.png', '~@/assets/images/Close2x.png', contain);
+            width: 32px; height: 32px; position: absolute; top: 32px; right: 32px;
         }
 
         .text {
@@ -28,13 +24,21 @@
 
     @media (max-width: 600px) {
         .content {
+            max-width: 336px; min-height: 226px; padding: 18px 30px; border-width: 5px;
             img {
-                display: none;
+                max-width: 125px;
+            }
+
+            .close {
+                width: 17px; height: 17px; top: 17px; right: 17px;
             }
 
             .text {
-                h2, p {
-                    max-width: 100%; text-align: center;
+                h2 {
+                    font-size: 24px; line-height: 30px;
+                }
+                p {
+                    font-size: 14px; line-height: 19px;
                 }
             }
         }

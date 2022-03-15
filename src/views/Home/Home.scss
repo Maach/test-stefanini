@@ -25,4 +25,41 @@
             width: 300px; font-size: 26px; line-height: 35px; padding: 22px 0 23px;
         }
     }
+    
+    @media (max-width: 1440px) {
+        &:before {
+            max-width: 605px; height: 600px;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        .about {
+            h1 {
+                max-width: 450px;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &:before {
+            position: static; margin: 0 auto; max-width: 330px; height: 310px; display: block;
+            @include responsiveBg('~@/assets/images/mobile/HomeDog.png', '~@/assets/images/mobile/HomeDog2x.png', contain, false, true)
+        }
+    }
+
+    @media (max-width: 600px) {
+        .about {
+            padding: 0 15px;
+            h1, p {
+                max-width: 330px;
+            }
+        }
+
+        .actions {
+            margin: 90px auto 0; flex-wrap: wrap; justify-content: center;
+            .button {
+                max-width: 330px;
+            }
+        }
+    }
 }

@@ -24,7 +24,8 @@
     &.loved {
         .actions {
             .fav {
-                @include responsiveBg('~@/assets/images/Heart.png', '~@/assets/images/Heart2x.png', 32px, true)
+                @include responsiveBg('~@/assets/images/Heart.png', '~@/assets/images/Heart2x.png', 32px, true);
+                background-color: rgba(#BF80FF, .2)
             }
         }
     }

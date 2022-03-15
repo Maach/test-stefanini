@@ -7,6 +7,7 @@ export default new Vuex.Store({
     state: {
         liked: [],
         activeModal: null,
+        activeMenu: false,
     },
     getters: {
         loved: state => petName => {
@@ -26,6 +27,9 @@ export default new Vuex.Store({
         },
         closeModal(state) {
             state.activeModal = null
+        },
+        toggleMenu(state, payload) {
+            state.activeMenu = payload !== undefined ? payload : !state.activeMenu
         },
     },
     actions: {

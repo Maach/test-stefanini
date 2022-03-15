@@ -16,10 +16,10 @@
         .copy
             .wrapper
                 p Copyright 2022. Todos os direitos.
-                p 
-                    strong Violência contra animais é crime. Denuncie 
+                p.violencia 
+                    strong Violência contra animais é crime.
                     a(href="tel:08006006428") 
-                        strong 0800 600 6428
+                        strong Denuncie 0800 600 6428
 </template>
 
 <script>

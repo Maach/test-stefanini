@@ -1,8 +1,12 @@
-@mixin responsiveBg($url, $url2, $size, $onlyImage: false, $dpr: 1.5, $position: center) {
+@mixin responsiveBg($url, $url2, $size, $resetFont: true, $onlyImage: false, $dpr: 1.5, $position: center) {
     background-image: url($url); 
     @if not $onlyImage {
         background-size: $size; background-repeat: no-repeat; 
-        background-position: $position; font: 0/0 a;
+        background-position: $position;
+    }
+    
+    @if $resetFont {
+        font: 0/0 a;
     }
 
     @media (-webkit-min-device-pixel-ratio: $dpr) {
