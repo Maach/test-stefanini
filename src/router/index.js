@@ -24,10 +24,16 @@ const routes = [
 const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
-    scrollBehavior (to, from, savedPosition) {
-        return { x: 0, y: 0 }
-    },
     routes
+})
+
+router.afterEach((to, from) => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
+    next()
 })
 
 export default router

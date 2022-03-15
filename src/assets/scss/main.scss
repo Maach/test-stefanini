@@ -21,6 +21,10 @@ article {
     @media (max-width: 1024px) {
         padding: 40px 0 95px;
     }
+
+    @media (max-width: 768px) {
+        padding-top: 110px;
+    }
 }
 
 .about {
