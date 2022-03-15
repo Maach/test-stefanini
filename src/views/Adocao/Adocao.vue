@@ -1,10 +1,8 @@
 <template lang="pug">
     article#adocao
-        .about
-            img(src="@/assets/images/AdoptDog.png", srcset="@/assets/images/AdoptDog.png, @/assets/images/AdoptDog2x.png 2x")
-            .wrapper
-                h2 Adote Agora
-                p Temos vários peludinhos esperando para fazer um lar mais feliz!
+        .about.wrapper
+            h1 Adote Agora
+            p Temos vários peludinhos esperando para fazer um lar mais feliz!
         Listagem(:pets="pets")
         ModalAdopt
         ModalLike

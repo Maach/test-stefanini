@@ -1,39 +1,30 @@
 .pet {
-    max-width: 300px;
-    h2 {
-        line-height: 2; font-size: 2em
+    max-width: 360px; padding: 20px; background: #fff; border-radius: 20px; box-shadow: 11px 10px 10px rgba(#BF80FF, .25);
+    height: 500px; display: flex; flex-direction: column; justify-content: space-between;
+    h3 {
+        font-family: 'Nunito'; font-weight: 700; font-size: 26px; line-height: 35px; text-align: center;
+        color: $primary1
     }
+
+    p {
+        font-weight: 300; font-size: 22px; line-height: 30px; text-align: center; color: #8E8E8E;
+    }
+
     .actions {
         display: flex; justify-content: space-between; gap: 20px;
         .fav {
-            background-image: url(~@/assets/images/GrayHeart.png); background-size: 32px; 
-            background-repeat: no-repeat; background-position: center; width: 60px; height: 52px; 
-            font: 0/0 a; transition: background-image .3s ease
+            @include responsiveBg('~@/assets/images/GrayHeart.png', '~@/assets/images/GrayHeart2x.png', 32px);
+            width: 60px; height: 52px; transition: background-image .3s ease; background-color: #E5E5E5;
+        }
+        .adopt {
+            width: 220px;
         }
     }
 
     &.loved {
         .actions {
             .fav {
-                background-image: url(~@/assets/images/Heart.png);
-            }
-        }
-    }
-}
-
-@media (-webkit-device-pixel-ratio: 2) {
-    .pet {
-        .actions {
-            .fav {
-                background-image: url(~@/assets/images/GrayHeart2x.png);
-            }
-        }
-
-        &.loved {
-            .actions {
-                .fav {
-                    background-image: url(~@/assets/images/Heart2x.png);
-                }
+                @include responsiveBg('~@/assets/images/Heart.png', '~@/assets/images/Heart2x.png', 32px, true)
             }
         }
     }

@@ -15,6 +15,31 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Amatic SC', cursive; margin: 0;
 }
 
+article {
+    padding: 127px 0 190px;
+}
+
+.about {
+    padding: 0 60px;
+
+    h1 {
+        font-weight: 700; font-size: 100px; line-height: 125px; margin-bottom: 62px;
+    }
+
+    p, ul {
+        font-size: 26px; line-height: 35px;
+    }
+
+    ul {
+        line-height: 50px; font-weight: 700; padding-left: 45px; margin: 55px 0;
+        list-style-image: url(~@/assets/images/DogHand.png);
+
+        @media (-webkit-min-device-pixel-ratio: 1.5) {
+            list-style-image: url(~@/assets/images/DogHand2x.png);
+        }
+    }
+}
+
 html, body, figure, p, ul {
     margin: 0;
 }
@@ -26,15 +51,19 @@ ul {
 button, a {
     background: none; appearance: none; border: none; border-radius: 0; padding: 0; cursor: pointer;
     text-decoration: none; display: inline-block;
+
     &.button {
-        background: $complementary1; border-radius: 10px; padding: 14px 0 15px; text-align: center; 
+        background: $complementary1; border-radius: 10px; padding: 10px 0 11px; text-align: center; 
         font-family: 'Nunito'; font-weight: 700; font-size: 20px; line-height: 25px;
+
         &.adopt {
-            background: $primary1; color: #FFF;
+            background: $primary1; color: #FFF; border: 3px solid $primary1;
         }
+
         &.rules {
             border: 3px solid $primary1; color: $primary1;
         }
+        
         &:hover {
             box-shadow: 8px 8px 20px rgba($primary1, .5);
         }

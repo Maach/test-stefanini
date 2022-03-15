@@ -1,9 +1,11 @@
 <template lang="pug">
     .pet(:class="{ loved }")
-        img(:src="src", :srcset="srcset", :alt="name")
-        h2 {{ name }}
+        img(:src="src", :srcset="srcset", :alt="pet.name")
+        .info
+            h3 {{ pet.name }}
+            p {{ pet.description }}
         .actions
-            button(@click="$store.dispatch('toggleLike', name)").fav.button Favoritar
+            button(@click="$store.dispatch('toggleLike', pet.name)").fav.button Favoritar
             button(@click="$store.commit('adopt')").adopt.button Adote agora
 </template>
 
@@ -11,27 +13,23 @@
 export default {
     name: `component-pets`,
     props: {
-        name: {
-            type: String,
-            required: true
-        },
-        photos: {
-            type: Array,
+        pet: {
+            type: Object,
             required: true
         },
     },
     computed: {
         loved() {
-            return this.$store.getters.loved(this.name)
+            return this.$store.getters.loved(this.pet.name)
         },
         src() {
-            return this.photos[0]
+            return this.pet.photos[0]
         },
         srcset() {
             let srcset = ``
-            this.photos.forEach((photo, index) => {
+            this.pet.photos.forEach((photo, index) => {
                 srcset += `${photo} ${index + 1}x`
-                if (index < this.photos.length - 1)
+                if (index < this.pet.photos.length - 1)
                     srcset += `,`
             })
             return srcset

@@ -1,7 +1,7 @@
 <template lang="pug">
     section#pets
         .wrapper
-            Pet(v-for="pet in pets", :name="pet.name", :photos="pet.photos", :key="pet.name")
+            Pet(v-for="pet in pets", :pet="pet", :key="pet.name")
 </template>
 
 <script>

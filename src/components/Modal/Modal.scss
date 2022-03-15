@@ -1,10 +1,10 @@
 .modal {
-    position: fixed; top: 0; left: 0; bottom: 0; right: 0; background: rgba(#464646, .65); z-index: 200;
-    padding: 25px; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(5px);
+    position: fixed; top: 0; left: 0; bottom: 0; right: 0; background: rgba(#8e8e8e, .5); z-index: 200;
+    padding: 25px; display: flex; align-items: center; justify-content: center;
 
     .content {
-        max-width: 590px; min-height: 410px; border-radius: 20px; width: 100%; display: flex; align-items: center;
-        padding: 30px 65px; position: relative;
+        max-width: 610px; min-height: 410px; border-radius: 20px; width: 100%; display: flex; align-items: center;
+        padding: 30px 65px; position: relative; border: 10px solid #fff;
 
         .close {
             background-image: url(~@/assets/images/Close.png); background-size: contain; 

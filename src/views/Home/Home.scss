@@ -1,0 +1,28 @@
+#home {
+    position: relative;
+
+    &:before {
+        content: ''; position: absolute; top: 20px; right: 0; max-width: 733px; width: 100%; height: 727px;
+        @include responsiveBg('~@/assets/images/HomeDog.png', '~@/assets/images/HomeDog2x.png', contain)
+    }
+
+    .about {
+        position: relative;
+
+        h1 {
+            max-width: 621px;
+        }
+
+        p {
+            max-width: 517px;
+        }
+    }
+
+    .actions {
+        display: flex; justify-content: space-between; gap: 40px; max-width: 640px; margin-top: 88px;
+
+        .button {
+            width: 300px; font-size: 26px; line-height: 35px; padding: 22px 0 23px;
+        }
+    }
+}

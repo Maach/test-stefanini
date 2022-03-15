@@ -1,27 +1,17 @@
 #adocao {
-    padding-bottom: 50px;
+    position: relative;
+
+    &:before {
+        content: ''; position: absolute; top: 40px; right: 0; max-width: 672px; width: 100%; height: 667px;
+        @include responsiveBg('~@/assets/images/AdoptDog.png', '~@/assets/images/AdoptDog2x.png', contain)
+    }
+
+    > *:not(.modal) {
+        position: relative;
+    }
 
     .about {
-        &:after {
-            content: "."; visibility: hidden; display: block; height: 0; clear: both;
-        }
-
-        .wrapper {
-            padding-top: 150px;
-        }
-
-        h2 {
-            font-weight: 700; font-size: 48px; line-height: 61px; margin-bottom: 30px;
-        }
-
-        p {
-            font-size: 18px; line-height: 28px; margin-bottom: 15px
-        }
-
-        img {
-            display: block; margin-left: 25px; margin-right: 0; margin-bottom: 25px; max-width: 600px; width: 100%; pointer-events: none;
-            float: right;
-        }
+        padding: 0 60px 127px;
     }
 
     @media (max-width: 1024px) {
