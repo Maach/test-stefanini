@@ -1,7 +1,7 @@
 import '@/assets/scss/main.scss'
 
 import Vue from 'vue'
-import App from './App.vue'
+import App from './templates/App/App.vue'
 import router from './router'
 import store from './store'
 import { VueSvgIcon } from '@yzfe/vue-svgicon'

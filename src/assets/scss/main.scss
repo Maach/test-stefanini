@@ -23,17 +23,20 @@ ul {
     padding: 0; list-style: none;
 }
 
-button {
-    background: none; appearance: none; border: none; border-radius: 0; padding: 0; cursor: pointer; 
+button, a {
+    background: none; appearance: none; border: none; border-radius: 0; padding: 0; cursor: pointer;
+    text-decoration: none; display: inline-block;
     &.button {
-        background: #E5E5E5; border-radius: 10px;
+        background: $complementary1; border-radius: 10px; padding: 14px 0 15px; text-align: center; 
+        font-family: 'Nunito'; font-weight: 700; font-size: 20px; line-height: 25px;
         &.adopt {
-            background: #7918d9; padding: 14px 0 15px; text-align: center; color: #FFF;
-            font-family: 'Nunito'; font-weight: 700; font-size: 20px; line-height: 25px;
-            width: 220px;
+            background: $primary1; color: #FFF;
+        }
+        &.rules {
+            border: 3px solid $primary1; color: $primary1;
         }
         &:hover {
-            box-shadow: 8px 8px 20px rgba(#7918d9, .5);
+            box-shadow: 8px 8px 20px rgba($primary1, .5);
         }
     }
 }

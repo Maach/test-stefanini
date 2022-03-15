@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Adocao from '@/views/Adocao/Adocao.vue'
-import Regras from '@/views/Regras/Regras.vue'
 
 Vue.use(VueRouter)
 
@@ -9,12 +7,17 @@ const routes = [
     {
         path: '/',
         name: 'home',
-        component: Adocao
+        component: () => import(/* webpackChunkName: "home" */ '@/views/Home/Home.vue')
+    },
+    {
+        path: '/adote-agora',
+        name: 'adocao',
+        component: () => import(/* webpackChunkName: "adocao" */ '@/views/Adocao/Adocao.vue')
     },
     {
         path: '/nossas-regras',
         name: 'regras',
-        component: Regras
+        component: () => import(/* webpackChunkName: "regras" */ '@/views/Regras/Regras.vue')
     },
 ]
 

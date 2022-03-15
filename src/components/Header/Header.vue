@@ -1,7 +1,7 @@
 <template lang="pug">
     header
         .wrapper
-            router-link(:to="{ name: 'home' }").logo
+            router-link(:to="{ name: 'adocao' }").logo
                 SvgIcon(data="@/assets/svgs/LogoQuatroPatas.svg" original)
             nav
                 router-link(:to="{ name: 'regras' }") Nossas Regras

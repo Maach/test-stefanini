@@ -1,13 +1,11 @@
 <template lang="pug">
     article#adocao
-        Listagem(:pets="pets")
         .about
-            img(src="@/assets/images/HomeDog.png", srcset="@/assets/images/HomeDog.png, @/assets/images/HomeDog2x.png 2x")
+            img(src="@/assets/images/AdoptDog.png", srcset="@/assets/images/AdoptDog.png, @/assets/images/AdoptDog2x.png 2x")
             .wrapper
-                h2 Conheça a Quatro Patas
-                p In minim sint cupidatat sint incididunt occaecat cillum adipisicing. Sit ullamco nisi exercitation non enim labore in dolore minim. Ipsum Lorem consequat ipsum excepteur esse est aliqua veniam velit duis id quis officia aliqua. Culpa quis cillum qui nostrud culpa. 
-                p Minim eiusmod aliqua enim dolore. Nulla eu incididunt voluptate excepteur. Sit ad consectetur esse ex officia velit aliquip sint anim mollit consequat nulla nisi sint. Eu exercitation occaecat consectetur voluptate fugiat quis. Et occaecat do non do commodo ullamco aliqua et. Est ipsum sint do dolor pariatur aliquip.
-                p Et occaecat culpa non ipsum aliqua sit elit mollit irure. Ipsum magna ipsum dolore ipsum. Ex reprehenderit non eu voluptate et commodo culpa esse et. Reprehenderit labore culpa voluptate anim ea culpa enim mollit.
+                h2 Adote Agora
+                p Temos vários peludinhos esperando para fazer um lar mais feliz!
+        Listagem(:pets="pets")
         ModalAdopt
         ModalLike
 </template>

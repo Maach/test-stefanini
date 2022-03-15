@@ -2,7 +2,7 @@
     footer
         .info
             .wrapper
-                router-link(:to="{ name: 'home' }")
+                router-link(:to="{ name: 'adocao' }")
                     SvgIcon(data="@/assets/svgs/LogoQuatroPatas.svg" original)
                 .contato
                     p
